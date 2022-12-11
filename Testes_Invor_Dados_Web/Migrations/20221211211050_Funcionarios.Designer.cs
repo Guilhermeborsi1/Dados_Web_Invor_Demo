@@ -10,8 +10,8 @@ using Testes_Invor_Dados_Web.Data;
 namespace Testes_Invor_Dados_Web.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20221210171424_Produto")]
-    partial class Produto
+    [Migration("20221211211050_Funcionarios")]
+    partial class Funcionarios
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -240,6 +240,9 @@ namespace Testes_Invor_Dados_Web.Migrations
                     b.Property<string>("Email")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Estado")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("Idade")
                         .HasColumnType("int");
 
@@ -274,6 +277,9 @@ namespace Testes_Invor_Dados_Web.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Estado")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Idade")

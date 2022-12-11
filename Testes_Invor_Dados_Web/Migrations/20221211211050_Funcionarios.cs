@@ -2,7 +2,7 @@
 
 namespace Testes_Invor_Dados_Web.Migrations
 {
-    public partial class Funcionario : Migration
+    public partial class Funcionarios : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

@@ -238,6 +238,9 @@ namespace Testes_Invor_Dados_Web.Migrations
                     b.Property<string>("Email")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Estado")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("Idade")
                         .HasColumnType("int");
 
@@ -272,6 +275,9 @@ namespace Testes_Invor_Dados_Web.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Estado")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Idade")
@@ -309,6 +315,9 @@ namespace Testes_Invor_Dados_Web.Migrations
 
                     b.Property<int>("Valor")
                         .HasColumnType("int");
+
+                    b.Property<string>("fornecedor")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 

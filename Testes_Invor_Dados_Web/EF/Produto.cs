@@ -12,6 +12,7 @@ namespace Testes_Invor_Dados_Web.EF
         public int Valor { get; set; }
         public int Quantidade { get; set; }
         public string Categoria { get; set; }
+        public string fornecedor { get; set; }
        
     }
 }

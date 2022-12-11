@@ -54,7 +54,7 @@ namespace Testes_Invor_Dados_Web.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Nome,Valor,Quantidade,Categoria")] Produto produto)
+        public async Task<IActionResult> Create([Bind("Id,Nome,Valor,Quantidade,Categoria,fornecedor")] Produto produto)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace Testes_Invor_Dados_Web.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,Valor,Quantidade,Categoria")] Produto produto)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,Valor,Quantidade,Categoria,fornecedor")] Produto produto)
         {
             if (id != produto.Id)
             {

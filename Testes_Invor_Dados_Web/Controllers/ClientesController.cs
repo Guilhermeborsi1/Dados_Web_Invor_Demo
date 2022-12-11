@@ -54,7 +54,7 @@ namespace Testes_Invor_Dados_Web.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Nome,Idade,Email,Cep,Rua,Bairro,Cidade,Pais")] Cliente cliente)
+        public async Task<IActionResult> Create([Bind("Id,Nome,Idade,Email,Cep,Rua,Bairro,Cidade,Estado,Pais")] Cliente cliente)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace Testes_Invor_Dados_Web.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,Idade,Email,Cep,Rua,Bairro,Cidade,Pais")] Cliente cliente)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,Idade,Email,Cep,Rua,Bairro,Cidade,Estado,Pais")] Cliente cliente)
         {
             if (id != cliente.Id)
             {
