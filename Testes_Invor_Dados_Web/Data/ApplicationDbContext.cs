@@ -16,5 +16,6 @@ namespace Testes_Invor_Dados_Web.Data
         public DbSet<Testes_Invor_Dados_Web.EF.Cliente> Cliente { get; set; }
         public DbSet<Testes_Invor_Dados_Web.EF.Funcionario> Funcionario { get; set; }
         public DbSet<Testes_Invor_Dados_Web.EF.Produto> Produto { get; set; }
+        public DbSet<Testes_Invor_Dados_Web.EF.Fornecedor> Fornecedor { get; set; }
     }
 }
