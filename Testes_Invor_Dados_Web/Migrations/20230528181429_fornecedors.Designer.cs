@@ -10,8 +10,8 @@ using Testes_Invor_Dados_Web.Data;
 namespace Testes_Invor_Dados_Web.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230121195906_Fornecedor")]
-    partial class Fornecedor
+    [Migration("20230528181429_fornecedors")]
+    partial class fornecedors
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -270,8 +270,8 @@ namespace Testes_Invor_Dados_Web.Migrations
                     b.Property<string>("Bairro")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("CNPJ")
-                        .HasColumnType("int");
+                    b.Property<string>("CNPJ")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Cep")
                         .HasColumnType("nvarchar(max)");
@@ -297,8 +297,8 @@ namespace Testes_Invor_Dados_Web.Migrations
                     b.Property<string>("Pais")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("RG")
-                        .HasColumnType("int");
+                    b.Property<string>("RG")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Rua")
                         .HasColumnType("nvarchar(max)");

@@ -268,8 +268,8 @@ namespace Testes_Invor_Dados_Web.Migrations
                     b.Property<string>("Bairro")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("CNPJ")
-                        .HasColumnType("int");
+                    b.Property<string>("CNPJ")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Cep")
                         .HasColumnType("nvarchar(max)");
@@ -295,8 +295,8 @@ namespace Testes_Invor_Dados_Web.Migrations
                     b.Property<string>("Pais")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("RG")
-                        .HasColumnType("int");
+                    b.Property<string>("RG")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Rua")
                         .HasColumnType("nvarchar(max)");

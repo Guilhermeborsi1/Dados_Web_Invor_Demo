@@ -11,8 +11,8 @@ namespace Testes_Invor_Dados_Web.EF
         public string Nome { get; set; }
         public Boolean Empresa { get; set; }
         public Boolean Individual { get; set; }
-        public int CNPJ { get; set; }
-        public int RG { get; set; }
+        public string CNPJ { get; set; }
+        public string RG { get; set; }
         public string Email { get; set; }
         public string Cep { get; set; }
         public string Rua { get; set; }

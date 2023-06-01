@@ -10,14 +10,14 @@ using Testes_Invor_Dados_Web.Data;
 namespace Testes_Invor_Dados_Web.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20221211211050_Funcionarios")]
-    partial class Funcionarios
+    [Migration("20230220171344_Funcionario")]
+    partial class Funcionario
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "3.1.30")
+                .HasAnnotation("ProductVersion", "3.1.32")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -260,6 +260,54 @@ namespace Testes_Invor_Dados_Web.Migrations
                     b.ToTable("Cliente");
                 });
 
+            modelBuilder.Entity("Testes_Invor_Dados_Web.EF.Fornecedor", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Bairro")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CNPJ")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Cep")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Cidade")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("Empresa")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Estado")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("Individual")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Nome")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Pais")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RG")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Rua")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("id");
+
+                    b.ToTable("Fornecedor");
+                });
+
             modelBuilder.Entity("Testes_Invor_Dados_Web.EF.Funcionario", b =>
                 {
                     b.Property<int>("Id")
@@ -317,6 +365,9 @@ namespace Testes_Invor_Dados_Web.Migrations
 
                     b.Property<int>("Valor")
                         .HasColumnType("int");
+
+                    b.Property<string>("fornecedor")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
